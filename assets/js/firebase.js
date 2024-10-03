@@ -10,10 +10,8 @@ const firebaseConfig = {
   projectId: "diario-digital-ef5f2",
   storageBucket: "diario-digital-ef5f2.appspot.com",
   messagingSenderId: "72453176073",
-  appId: "1:72453176073:web:21c7850d965659831ef1d8"
+  appId: "1:72453176073:web:21c7850d965659831ef1d8",
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
-export {app};
+export const app = initializeApp(firebaseConfig);

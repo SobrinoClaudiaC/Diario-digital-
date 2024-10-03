@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <script type="module" src="./assets/js/script.js"></script>
   </head>
-  <body style="background-color: rgb(42, 42, 42)">
+  <body>
+    <!--NavBar-->
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Diario Digital</a>
@@ -62,7 +63,7 @@
       </div>
     </nav>
 
-    <!-- Modal -->
+    <!-- Signin Modal -->
     <div
       class="modal fade"
       id="signin-modal"
@@ -78,28 +79,45 @@
             </h1>
             <button
               type="button"
-              class="btn-close"
+              class="btn-close btn-close-white"
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body text-black">Inserta los datos</div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Cerrar
-            </button>
-            <button type="button" class="btn btn-primary">
-              Guardar cambios
-            </button>
+          <div class="modal-body text-light">
+            <form action="" class="" id="signin-form">
+              <div class="mb-3">
+                <label for="signin-email" class="form-label">Correo:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="correo@ejemplo.com"
+                  id="signin-email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="signin-password" class="form-label"
+                  >Contraseña:</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="*******"
+                  id="signin-password"
+                  required
+                />
+              </div>
+              <div>
+                <button type="submit" class="btn btn-success">Entrar</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
 
+    <!--Signup Modal-->
     <div
       class="modal fade"
       id="signup-modal"
@@ -115,23 +133,44 @@
             </h1>
             <button
               type="button"
-              class="btn-close"
+              class="btn-close btn-close-white"
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body text-black">Inserta los datos</div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Cerrar
-            </button>
-            <button type="button" class="btn btn-primary">
-              Guardar cambios
-            </button>
+          <div class="modal-body text-light">
+            <!--Formulario-->
+            <form action="" class="" id="signup-form">
+              <div class="mb-3">
+                <label for="signup-email" class="form-label">Correo:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="correo@ejemplo.com"
+                  id="signup-email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="signup-password" class="form-label"
+                  >Contraseña:</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="*******"
+                  id="signup-password"
+                  required
+                />
+              </div>
+              <div>
+                <input
+                  type="submit"
+                  class="btn btn-success"
+                  value="Registrarse"
+                />
+              </div>
+            </form>
           </div>
         </div>
       </div>
