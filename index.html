@@ -45,18 +45,18 @@
                 >Iniciar Sesión</a
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item logged-out">
               <a
-                class="nav-link logged-out"
+                class="nav-link"
                 href="#"
                 data-bs-toggle="modal"
                 data-bs-target="#signup-modal"
                 >Registrarse</a
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item logged-in">
               <a
-                class="nav-link logged-in"
+                class="nav-link"
                 data-bs-target="#logout-modal"
                 id="logout"
                 href="#"
@@ -90,7 +90,7 @@
             ></button>
           </div>
           <div class="modal-body text-light">
-            <!--Formulario Signin-->
+            <!--Formulario-->
             <form action="" class="" id="signin-form">
               <div class="mb-3">
                 <label for="signin-email" class="form-label">Correo:</label>
@@ -115,7 +115,11 @@
                 />
               </div>
               <div>
-                <button type="submit" class="btn btn-success">Entrar</button>
+                <input
+                  type="submit"
+                  class="btn btn-success"
+                  value="Iniciar sesión"
+                />
               </div>
             </form>
           </div>
