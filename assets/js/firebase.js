@@ -3,6 +3,15 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/fireba
 
 // Autenticación
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-auth.js";
+
+// Firestore
+import {
+  getFirestore,
+  collection,
+  doc,
+  addDoc,
+} from "https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore.js";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -20,3 +29,9 @@ const firebaseConfig = {
 export const app = initializeApp(firebaseConfig);
 // Inicializar Autenticacion de Firebase y obtener una referencia del servicio
 export const auth = getAuth(app);
+// Inicializar Firestore
+export const db = getFirestore();
+
+// Operaciones CRUD
+export const createTask = (title, description) =>
+  addDoc(collection(db, "tasks"), { title, description });

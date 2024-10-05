@@ -7,6 +7,7 @@ import { checkLogin } from "./checkLogin.js";
 import "./signupForm.js";
 import "./signinForm.js";
 import "./signOut.js";
+import "./googleLogin.js";
 
 // Manejo de autenticación
 onAuthStateChanged(auth, async (user) => {
