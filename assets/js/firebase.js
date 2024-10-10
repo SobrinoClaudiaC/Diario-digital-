@@ -11,6 +11,7 @@ import {
   doc,
   addDoc,
   onSnapshot,
+  deleteDoc,
 } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -33,9 +34,12 @@ export const auth = getAuth(app);
 // Inicializar Firestore
 export const db = getFirestore();
 
-// Operaciones CRUD
+//* Operaciones CRUD:
+// Crear tarea (Create)
 export const createTask = (title, description) =>
   addDoc(collection(db, "tasks"), { title, description });
-
+// Leer tarea (Read)
 export const onGetTask = (callback) =>
   onSnapshot(collection(db, "tasks"), callback);
+// Borrar tareas (Delete)
+export const deleteTask = (id) => deleteDoc(doc(db, "tasks", id));
