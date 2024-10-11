@@ -38,8 +38,8 @@ export const db = getFirestore();
 
 // Todo: Operaciones CRUD
 // Crear tarea (Create)
-export const createTask = (title, description) =>
-  addDoc(collection(db, "tasks"), { title, description });
+export const createTask = (title, description, userName, userImage) =>
+  addDoc(collection(db, "tasks"), { title, description, userName, userImage });
 // Leer tarea (Read)
 export const onGetTask = (callback) =>
   onSnapshot(collection(db, "tasks"), callback);
