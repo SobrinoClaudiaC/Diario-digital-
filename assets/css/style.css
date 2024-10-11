@@ -4,3 +4,16 @@ body {
 .task-profile-picture {
   width: 40px;
 }
+h3 {
+  color: rgb(147, 172, 172);
+}
+.div-message {
+  background-color: rgb(46, 53, 55);
+  margin-top: 3px;
+  padding: 25px;
+}
+.bienvenida {
+  color: rgb(190, 190, 190);
+  font-style: oblique;
+  text-align: justify;
+}

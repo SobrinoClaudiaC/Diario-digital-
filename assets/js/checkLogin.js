@@ -3,6 +3,7 @@ import { setupTasks } from "./setupTasks.js";
 const LoggedIn = document.querySelectorAll(".logged-in");
 const LoggedOut = document.querySelectorAll(".logged-out");
 const mainContainer = document.querySelector("#main-container");
+const inicioContainer = document.querySelector("#inicio-container");
 const saludo = document.querySelector("#saludo");
 
 export const checkLogin = (user) => {
@@ -13,6 +14,9 @@ export const checkLogin = (user) => {
     // Mostramos el main container
     mainContainer.style.display = "block";
     saludo.textContent = `Bienvenidx ${user.email}`;
+    // Ocultamos el inicio container
+    inicioContainer.style.display = "none";
+    mensaje.textContent = "";
 
     // Cargamos las tareas
     setupTasks(user);
@@ -22,5 +26,8 @@ export const checkLogin = (user) => {
     // Ocultamos el main container
     mainContainer.style.display = "none";
     saludo.textContent = "";
+    // Mostramos el inicio container
+    inicioContainer.style.display = "block";
+    mensaje.textContent = "";
   }
 };
