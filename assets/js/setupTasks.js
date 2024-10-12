@@ -27,6 +27,9 @@ export const setupTasks = (user) => {
     const title = taskForm["title"].value;
     const description = taskForm["description"].value;
 
+    // Obtener la fecha y hora actual
+    const dateTime = new Date().toLocaleString();
+
     // Crear y/o editar una nueva tarea
     try {
       if (!editStatus) {
@@ -36,15 +39,16 @@ export const setupTasks = (user) => {
           description,
           user.displayName,
           user.photoURL,
-          user.email
+          user.email,
+          dateTime
         );
         // Mostrar mensaje de éxito
-        showMessage("Tarea creada", "success");
+        showMessage("Post creado", "success");
       } else {
-        // Actualizar tarea
-        await updateTask(editId, { title, description });
+        // Actualizar tarea (con fecha y hora)
+        await updateTask(editId, { title, description, dateTime });
         // Mostrar mensaje de éxito
-        showMessage("Tarea actualizada", "success");
+        showMessage("Post actualizado", "success");
 
         // Cambiar el estado de edición
         editStatus = false;
@@ -53,8 +57,8 @@ export const setupTasks = (user) => {
 
         // Modificamos lo que muestra el formulario
         document.getElementById("form-title").innerHTML =
-          "Agregar una nueva tarea";
-        taskForm["btn-agregar"].value = "Crear tarea";
+          "Añadir un nuevo post";
+        taskForm["btn-agregar"].value = "Postear";
       }
 
       // Limpiar el formulario
@@ -80,6 +84,7 @@ export const setupTasks = (user) => {
               data.userImage
             }" alt="${data.userName}" />
             <p class="m-0">${data.userName}</p>
+            <div id=fechayhora>${data.dateTime}</div>
           </div>
           ${
             user.email === data.userEmail
@@ -119,7 +124,7 @@ export const setupTasks = (user) => {
         editStatus = true;
         editId = doc.id;
         // Cambiamos lo que muestra el formulario
-        document.getElementById("form-title").innerHTML = "Editar tarea";
+        document.getElementById("form-title").innerHTML = "Editar post";
         taskForm["btn-agregar"].value = "Guardar cambios";
       });
     });

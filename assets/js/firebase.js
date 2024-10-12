@@ -43,7 +43,8 @@ export const createTask = (
   description,
   userName,
   userImage,
-  userEmail
+  userEmail,
+  dateTime
 ) =>
   addDoc(collection(db, "tasks"), {
     title,
@@ -51,6 +52,7 @@ export const createTask = (
     userName,
     userImage,
     userEmail,
+    dateTime,
   });
 // Leer tarea (Read)
 export const onGetTask = (callback) =>
