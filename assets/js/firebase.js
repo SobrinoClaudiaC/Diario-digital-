@@ -2,7 +2,10 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
 
 // Autenticación
-import { getAuth } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-auth.js";
+import {
+  getAuth,
+  updateProfile,
+} from "https://www.gstatic.com/firebasejs/10.14.0/firebase-auth.js";
 
 // Firestore
 import {
@@ -64,3 +67,5 @@ export const updateTask = (id, newData) =>
   updateDoc(doc(db, "tasks", id), newData);
 // Borrar tareas (Delete)
 export const deleteTask = (id) => deleteDoc(doc(db, "tasks", id));
+// Foto de perfil
+export { updateProfile };

@@ -81,7 +81,7 @@ export const setupTasks = (user) => {
         <header class="d-flex justify-content-between align-items-center">
           <div class="d-flex align-items-center gap-3">
             <img class="task-profile-picture rounded-circle" src="${
-              data.userImage
+              data.userImage ? data.userImage : "./assets/img/default.pfp.png"
             }" alt="${data.userName}" />
             <p class="m-0">${data.userName}</p>
             <div id=fechayhora>${data.dateTime}</div>
@@ -89,7 +89,7 @@ export const setupTasks = (user) => {
           ${
             user.email === data.userEmail
               ? `<div>
-            <button class="btn btn-info btn-editar" data-id="${doc.id}"><i class="bi bi-pencil-fill"></i></button>
+            <button class="btn btn-warning btn-editar" data-id="${doc.id}"><i class="bi bi-pencil-fill"></i></button>
             <button class="btn btn-danger btn-eliminar" data-id="${doc.id}"><i class="bi bi-trash3-fill"></i></button>
           </div>`
               : `<div></div>`

@@ -13,7 +13,7 @@ export const checkLogin = (user) => {
     LoggedOut.forEach((element) => (element.style.display = "none"));
     // Mostramos el main container
     mainContainer.style.display = "block";
-    saludo.textContent = `Bienvenidx ${user.email}`;
+    saludo.textContent = `Bienvenidx ${user.email}!`;
     // Ocultamos el inicio container
     inicioContainer.style.display = "none";
     mensaje.textContent = "";

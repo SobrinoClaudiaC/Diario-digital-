@@ -17,3 +17,9 @@ h3 {
   font-style: oblique;
   text-align: justify;
 }
+.salu2 {
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: rgb(37, 52, 52);
+  color: rgb(223, 252, 243);
+}

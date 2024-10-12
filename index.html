@@ -99,7 +99,7 @@
 
     <!--Saludo en inicio de sesión-->
     <main id="main-container" class="p-4 text-light">
-      <p id="saludo">...</p>
+      <p id="saludo" class="salu2">...</p>
       <!--Form de tarea-->
       <div class="">
         <form
@@ -117,7 +117,7 @@
               type="text"
               class="form-control"
               id="title"
-              placeholder="Nombre de la tarea..."
+              placeholder="Titule su publicación"
               required
             />
           </div>
@@ -129,7 +129,7 @@
               class="form-control"
               rows="3"
               id="description"
-              placeholder="Hoy haré..."
+              placeholder="..."
             ></textarea>
           </div>
           <hr />
@@ -138,7 +138,7 @@
               type="submit"
               value="Postear"
               id="btn-agregar"
-              class="btn btn-primary"
+              class="btn btn-info"
               required
             />
           </div>
@@ -155,7 +155,7 @@
       </div>
     </main>
 
-    <!-- Inicio de sesión-Modal -->
+    <!-- Signin Modal (Inicio de sesión) -->
     <div
       class="modal fade"
       id="signin-modal"
@@ -196,7 +196,7 @@
                 <input
                   type="password"
                   class="form-control"
-                  placeholder="*******"
+                  placeholder="******"
                   id="signin-password"
                   required
                 />
@@ -211,7 +211,7 @@
             </form>
             <hr />
             <div>
-              <button class="btn btn-info" id="google-btn">
+              <button class="btn btn-primary" id="google-btn">
                 <i class="bi bi-google"></i>oogle
               </button>
             </div>
@@ -220,7 +220,7 @@
       </div>
     </div>
 
-    <!--Signup (Cierre de sesión) Modal-->
+    <!--Signup Modal (Cierre de sesión)-->
     <div
       class="modal fade"
       id="signup-modal"
@@ -243,7 +243,19 @@
           </div>
           <div class="modal-body text-light">
             <!--Formulario-->
-            <form action="" class="" id="signup-form">
+            <form id="signup-form">
+              <div class="mb-3">
+                <label for="signup-name" class="form-label"
+                  >Nombre completo</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Ingresa tu nombre"
+                  id="signup-name"
+                  required
+                />
+              </div>
               <div class="mb-3">
                 <label for="signup-email" class="form-label">Correo:</label>
                 <input
